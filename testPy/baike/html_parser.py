@@ -15,7 +15,7 @@ class HtmlParser(object):
 
     def _get_new_urls(self, page_url, soup):
         new_urls=set()
-        #     /item/Python/407313?fr=aladdin         re是什么？
+        #     /item/Python/407313?fr=aladdin         
         links=soup.findAll('a',href=re.compile(r"/item/"))
         for link in links:
             new_url=link['href']
